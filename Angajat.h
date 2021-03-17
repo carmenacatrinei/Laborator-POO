@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cstring>
+
 class Angajat{
 protected:
 	std::string job, nume, prenume;
@@ -8,6 +9,28 @@ protected:
 	float salariu;
 
 public:
+	Angajat::Angajat() {
+		//constructor implicit
+		job = '';
+		nume = '';
+		prenume = '';
+		varsta = 0;
+		vechime = 0;
+		salariu = 0;
+	}
+	Angajat::Angajat(std::string nume, std::string prenume, int varsta, int vechime)
+	{	//constructor general
+		this->job = "";
+		this->nume = nume;
+		this->prenume = prenume;
+		this->varsta = varsta;
+		this->vechime = vechime;
+	}
+	void afisare() {
+		std::cout << this->nume << " " << this->prenume << " are job-ul de " << this->job << ". ";
+		std::cout << "Angajatul are varsta de " << this->varsta << " ani, o vechime de " << this->vechime << " ani ";
+		std::cout << "si un salariu de " << this->salariu << " lei net lunar.";
+	}
 	std::string getJob() {
 		return this->job;
 	}
@@ -39,4 +62,6 @@ public:
 	virtual void marire_salariu() = 0;
 	
 };
+
+
 
