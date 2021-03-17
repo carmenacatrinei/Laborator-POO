@@ -1,9 +1,6 @@
 #pragma once
-
 #include <iostream>
 #include <cstring>
-
-
 
 class Animal {      //clasa abstracta pe care o vor mosteni animalele
 protected:
@@ -14,6 +11,12 @@ protected:
     bool dresat; // 0-nu, 1-da
     float portie_zilnica;
 public:
+    Animal(std::string nume, int varsta, std::string gen, bool dresat) {
+        this->nume = nume;
+        this->varsta = varsta;
+        this->gen = gen;
+        this->dresat = dresat;
+    }
     std::string getSpecie() {
         return this->specie;
     }
@@ -32,8 +35,8 @@ public:
     //int getNumar() {
     //    return numar;
     //}
-    bool getGen() {
-        return gen;
+    std::string getGen() {
+        return gen ? 'F' : 'M';
     }
     float getPortieZilnica() {
         return portie_zilnica;
@@ -41,7 +44,7 @@ public:
     int setPortieZilnica(float portie_noua) {
         this->portie_zilnica = portie_noua;
     }
-    bool getDresat() {
+    bool isDresat() {
         return dresat;
     }
     virtual void afisare() = 0;
@@ -50,3 +53,4 @@ public:
 };
 
 //int Animal::numar = 0;
+
