@@ -3,17 +3,16 @@
 #include "Animale.h"
 #include "Angajati.h"
 
-
 int main()
 {
-    Leu leu1("Charile", 4, 0, 0);
-    Urs urs1("Bruno", 2, 1, 1);
+    Leu leu1("Charile", 4, 0, 'M');
+    Urs urs1("Bruno", 2, 1, 'F');
 
-    leu1.afisare();
+    cout << leu1;
     std::cout << "\n";
     leu1.dreseaza();
     std::cout << "\n";
-    leu1.afisare();
+    cout << leu1;
     std::cout << "\n\n";
     urs1.afisare();
     std::cout << "\n";
