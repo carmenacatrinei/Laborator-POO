@@ -4,26 +4,25 @@
 
 class Casier : public Angajat{
 public:
-	Casier(std::string, std::string, int, int, float);
+	Casier(std::string, std::string, int, int);
 	~Casier();
-	void afisare();
 	void marire_salariu();
+	//void afisare();
 };
 
 class Ingrijitor : public Angajat {
 public:
-	Ingrijitor(std::string, std::string, int, int, float);
+	Ingrijitor(std::string, std::string, int, int);
 	~Ingrijitor();
-	void afisare();
 	void marire_salariu();
+	//void afisare();
 };
 
 class Dresor : public Angajat {
 public:
-	Dresor(std::string, std::string, int, int, float);
+	Dresor(std::string, std::string, int, int);
 	~Dresor();
-	void afisare();
 	void marire_salariu();
+	//void afisare();
 };
-
 
