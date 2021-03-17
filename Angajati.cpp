@@ -1,22 +1,18 @@
 #include "Angajati.h"
 
-
-Casier::Casier(std::string nume, std::string prenume, int varsta, int vechime, float salariu)
+Casier::Casier(std::string nume, std::string prenume, int varsta, int vechime) : Angajat(nume, prenume, varsta, vechime)
 {
 	this->job = "Casier";
-	this->nume = nume;
-	this->prenume = prenume;
-	this->varsta = varsta;
-	this->vechime = vechime;
 	this->salariu = GradinaZoologica::salariuBaza_casier;
 }
 
-void Casier::afisare() 
+/*void Casier::afisare() 
 {
 	std::cout << this->nume << " " << this->prenume << " are job-ul de " << this->job << ". ";
 	std::cout << "Angajatul are varsta de " << this->varsta << " ani, o vechime de " << this->vechime << " ani ";
 	std::cout << "si un salariu de " << this->salariu << " lei net lunar.";
 }
+*/
 
 void Casier::marire_salariu()
 {
@@ -48,22 +44,18 @@ Casier::~Casier()
 
 //---------------------------------------------------------------
 
-Ingrijitor::Ingrijitor(std::string nume, std::string prenume, int varsta, int vechime, float salariu)
+Ingrijitor::Ingrijitor(std::string nume, std::string prenume, int varsta, int vechime) : Angajat(nume, prenume, varsta, vechime)
 {
 	this->job = "Ingrijitor";
-	this->nume = nume;
-	this->prenume = prenume;
-	this->varsta = varsta;
-	this->vechime = vechime;
 	this->salariu = GradinaZoologica::salariuBaza_ingrijitor;
 }
 
-void Ingrijitor::afisare()
+/*void Ingrijitor::afisare()
 {
 	std::cout << this->nume << " " << this->prenume << " are job-ul de " << this->job << ". ";
 	std::cout << "Angajatul are varsta de " << this->varsta << " ani, o vechime de " << this->vechime << " ani ";
 	std::cout << "si un salariu de " << this->salariu << " lei net lunar.";
-}
+}*/
 
 void Ingrijitor::marire_salariu()
 {
@@ -95,22 +87,18 @@ Ingrijitor::~Ingrijitor()
 
 //-------------------------------------------------------------------
 
-Dresor::Dresor(std::string nume, std::string prenume, int varsta, int vechime, float salariu)
+Dresor::Dresor(std::string nume, std::string prenume, int varsta, int vechime) : Angajat(nume, prenume, varsta, vechime)
 {
 	this->job = "Dresor";
-	this->nume = nume;
-	this->prenume = prenume;
-	this->varsta = varsta;
-	this->vechime = vechime;
 	this->salariu = GradinaZoologica::salariuBaza_dresor;
 }
 
-void Dresor::afisare()
+/*void Dresor::afisare()
 {
 	std::cout << this->nume << " " << this->prenume << " are job-ul de " << this->job << ". ";
 	std::cout << "Angajatul are varsta de " << this->varsta << " ani, o vechime de " << this->vechime << " ani ";
 	std::cout << "si un salariu de " << this->salariu << " lei net lunar.";
-}
+}*/
 
 void Dresor::marire_salariu()
 {
