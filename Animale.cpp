@@ -1,6 +1,17 @@
 #include "Animale.h"
 
-Leu::Leu(Leu copie_leu) {
+Leu::Leu()
+{
+    specie = "";
+    nume = "";
+    varsta = 0;
+    gen = 0;
+    dresat = 0;
+    portie_zilnica = 0;
+}
+
+Leu::Leu(Leu &copie_leu) 
+{
     //constructor de copiere
     this->specie = copie_leu.specie;
     this->nume = copie_leu.nume;
@@ -20,10 +31,10 @@ Leu Leu::operator=(const Leu& copie_leu) {
     return *this;
 }
 
-ostream& operator<<(ostream& output, const Leu& afisare_leu) {
-    output << this->specie << "l " << this->nume << " are varsta de " << this->varsta << " ani. ";
-    output << this->nume << " are genul ";
-    if (gen == 'M')
+std::ostream& operator<<(std::ostream& output, const Leu& afisare_leu) {
+    output << afisare_leu.specie << "l " << afisare_leu.nume << " are varsta de " << afisare_leu.varsta << " ani. ";
+    output << afisare_leu.nume << " are genul ";
+    if (afisare_leu.gen == 0)
     {
         output << "masculin,";
     }
@@ -31,7 +42,7 @@ ostream& operator<<(ostream& output, const Leu& afisare_leu) {
     {
         output << "feminin,";
     }
-    if (dresat == 1)
+    if (afisare_leu.dresat == 1)
     {
         output << " este dresat ";
     }
@@ -39,11 +50,11 @@ ostream& operator<<(ostream& output, const Leu& afisare_leu) {
     {
         output << " nu este dresat ";
     }
-    output << "si mananca zilnic " << this->portie_zilnica << " kg de mancare.";
+    output << "si mananca zilnic " << afisare_leu.portie_zilnica << " kg de mancare.\n\n";
     return output;
 }
 
-Leu::Leu(std::string nume, int varsta, std::string gen, bool dresat) : Animal(nume, varsta, gen, dresat) 
+Leu::Leu(std::string nume, int varsta, bool gen, bool dresat) : Animal(nume, varsta, gen, dresat) 
 {   /*lista initializare*/
     this->specie = "Leu";
     if (this->varsta < 3)
@@ -76,7 +87,7 @@ void Leu::dreseaza() {
     }
 }
 
-/*void Leu::afisare()
+void Leu::afisare()
 {
     std::cout << this->specie << "l " << this->nume << " are varsta de " << this->varsta << " ani. ";
     std::cout << this->nume << " are genul ";
@@ -98,20 +109,20 @@ void Leu::dreseaza() {
     }
     std::cout << "si mananca zilnic " << this->portie_zilnica << " kg de mancare.";
 }
-*/
+
 
 Leu::~Leu() {
     specie = "";
     nume = "";
     varsta = 0;
     //numar -= 1;
-    if (gen == 'M')
+    if (gen == 0)
     {
-        gen = 'F';
+        gen = 1;
     }
     else
     {
-        gen = 'M';
+        gen = 0;
     }
     if (dresat == 0)
     {
@@ -126,7 +137,17 @@ Leu::~Leu() {
 
 //------------------------------------------------------------------
 
-Urs::Urs(std::string nume, int varsta, std::string gen, bool dresat) : Animal(nume, varsta, gen, dresat) 
+Urs::Urs()
+{
+    specie = "";
+    nume = "";
+    varsta = 0;
+    gen = 0;
+    dresat = 0;
+    portie_zilnica = 0;
+}
+
+Urs::Urs(std::string nume, int varsta, bool gen, bool dresat) : Animal(nume, varsta, gen, dresat) 
 {
     this->specie = "Urs";
     if (this->varsta < 3)
@@ -163,7 +184,7 @@ void Urs::afisare()
 {
     std::cout << this->specie << "ul " << this->nume << " are varsta de " << this->varsta << " ani. ";
     std::cout << this->nume << " are genul ";
-    if (gen == 'M')
+    if (gen == 0)
     {
         std::cout << "masculin,";
     }
