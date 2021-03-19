@@ -7,11 +7,20 @@ protected:
     std::string specie, nume;
     int varsta;
     //static int numar;
-    bool gen; // 0-masculin, 1-feminin
+    bool gen; //0 masculin, 1 feminin 
     bool dresat; // 0-nu, 1-da
     float portie_zilnica;
 public:
-    Animal(std::string nume, int varsta, std::string gen, bool dresat) {
+    Animal()
+    {
+        specie = "";
+        nume = "";
+        varsta = 0;
+        gen = 0;
+        dresat = 0;
+        portie_zilnica = 0;
+    }
+    Animal(std::string nume, int varsta, bool gen, bool dresat) {
         this->nume = nume;
         this->varsta = varsta;
         this->gen = gen;
@@ -35,8 +44,8 @@ public:
     //int getNumar() {
     //    return numar;
     //}
-    std::string getGen() {
-        return gen ? 'F' : 'M';
+    bool getGen() {
+        return gen;
     }
     float getPortieZilnica() {
         return portie_zilnica;
@@ -53,4 +62,3 @@ public:
 };
 
 //int Animal::numar = 0;
-
