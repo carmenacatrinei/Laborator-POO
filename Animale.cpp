@@ -40,6 +40,7 @@ ostream& operator<<(ostream& output, const Leu& afisare_leu) {
         output << " nu este dresat ";
     }
     output << "si mananca zilnic " << this->portie_zilnica << " kg de mancare.";
+    return output;
 }
 
 Leu::Leu(std::string nume, int varsta, std::string gen, bool dresat) : Animal(nume, varsta, gen, dresat) 
