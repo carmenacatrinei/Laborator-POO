@@ -4,22 +4,26 @@
 
 class Leu :public Animal {
 public:
-    Leu(std::string, int,std::string, bool);
+    Leu();
+    Leu(std::string, int, bool, bool);
     ~Leu();
-    Leu(Leu copie_leu);
+    Leu(Leu& copie_leu);
     Leu operator=(const Leu& copie_leu);
-    friend ostream& operator<<(ostream& output, const Leu& afisare_leu);
+    friend std::ostream& operator<<(std::ostream& output, const Leu& afisare_leu);
     void dreseaza();
     void infoGenerale();
-    /*void afisare();*/
+    void afisare();
 };
 
 class Urs :public Animal {
 public:
-    Urs(std::string, int, std::string, bool);
+    Urs();
+    Urs(std::string, int, bool, bool);
     ~Urs();
     void dreseaza();
     void infoGenerale();
     void afisare();
 };
+
+
 
