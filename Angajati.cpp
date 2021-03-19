@@ -1,5 +1,15 @@
 #include "Angajati.h"
 
+Casier::Casier()
+{
+	job = "";
+	nume = "";
+	prenume = "";
+	varsta = 0;
+	vechime = 0;
+	salariu = 0;
+}
+
 Casier::Casier(std::string nume, std::string prenume, int varsta, int vechime) : Angajat(nume, prenume, varsta, vechime)
 {
 	this->job = "Casier";
@@ -22,7 +32,7 @@ void Casier::marire_salariu()
 	}
 	for (int i = 1; i < vechime / 2; i++)
 	{
-		salariu = salariu + 0.1 * salariu;
+		salariu = 1.1 * salariu;
 	}
 
 	if (salariu > GradinaZoologica::salariuBaza_casier)
@@ -43,6 +53,16 @@ Casier::~Casier()
 }
 
 //---------------------------------------------------------------
+
+Ingrijitor::Ingrijitor()
+{
+	job = "";
+	nume = "";
+	prenume = "";
+	varsta = 0;
+	vechime = 0;
+	salariu = 0;
+}
 
 Ingrijitor::Ingrijitor(std::string nume, std::string prenume, int varsta, int vechime) : Angajat(nume, prenume, varsta, vechime)
 {
@@ -65,7 +85,7 @@ void Ingrijitor::marire_salariu()
 	}
 	for (int i = 1; i < vechime / 2; i++)
 	{
-		salariu = salariu + 0.1 * salariu;
+		salariu = 1.1 * salariu;
 	}
 
 	if (salariu > GradinaZoologica::salariuBaza_ingrijitor)
@@ -86,6 +106,16 @@ Ingrijitor::~Ingrijitor()
 }
 
 //-------------------------------------------------------------------
+
+Dresor::Dresor()
+{
+	job = "";
+	nume = "";
+	prenume = "";
+	varsta = 0;
+	vechime = 0;
+	salariu = 0;
+}
 
 Dresor::Dresor(std::string nume, std::string prenume, int varsta, int vechime) : Angajat(nume, prenume, varsta, vechime)
 {
@@ -108,7 +138,7 @@ void Dresor::marire_salariu()
 	}
 	for (int i = 1; i < vechime / 2; i++)
 	{
-		salariu = salariu + 0.1 * salariu;
+		salariu = 1.1 * salariu;
 	}
 
 	if (salariu > GradinaZoologica::salariuBaza_dresor)
