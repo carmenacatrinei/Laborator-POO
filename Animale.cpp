@@ -10,7 +10,7 @@ Leu::Leu()
     portie_zilnica = 0;
 }
 
-Leu::Leu(Leu &copie_leu) 
+Leu::Leu(const Leu &copie_leu) 
 {
     //constructor de copiere
     this->specie = copie_leu.specie;
