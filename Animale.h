@@ -7,7 +7,7 @@ public:
     Leu();
     Leu(std::string, int, bool, bool);
     ~Leu();
-    Leu(Leu& copie_leu);
+    Leu(const Leu& copie_leu);
     Leu operator=(const Leu& copie_leu);
     friend std::ostream& operator<<(std::ostream& output, const Leu& afisare_leu);
     void dreseaza();
