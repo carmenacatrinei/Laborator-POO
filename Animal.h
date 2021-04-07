@@ -38,7 +38,7 @@ public:
     int getVarsta() {
         return varsta;
     }
-    int setVarsta(int varsta_noua) {
+    void setVarsta(int varsta_noua) {
         this->varsta = varsta_noua;
     }
     //int getNumar() {
@@ -50,7 +50,7 @@ public:
     float getPortieZilnica() {
         return portie_zilnica;
     }
-    int setPortieZilnica(float portie_noua) {
+    void setPortieZilnica(float portie_noua) {
         this->portie_zilnica = portie_noua;
     }
     bool isDresat() {
