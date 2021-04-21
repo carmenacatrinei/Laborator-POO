@@ -27,7 +27,17 @@ int main()
     std::cout << "\n";
 
     GradinaZoologica zoo1;
-    zoo1.adaugare_animal(leu1);
+
+    try
+    {
+        zoo1.adaugare_animal(leu1);
+    }
+    catch (std::bad_alloc& badAll)
+    {
+        std::cerr << "Nu s-a putut adauga acest animal! " << badAll.what() << '\n';
+    }
+    
+
     zoo1.adaugare_animal(urs1);
     //zoo1.adaugare_angajat(casier1); 
     zoo1.afisare_zoo();
