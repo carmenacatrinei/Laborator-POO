@@ -49,7 +49,7 @@ public:
 		return this->varsta;
 	}
 
-	void setVarsta(int varsta_noua) {
+	int setVarsta(int varsta_noua) {
 		this->varsta = varsta_noua;
 	}
 
@@ -57,7 +57,7 @@ public:
 		return this->vechime;
 	}
 
-	void setVechime(int vechime_actualizata) {
+	int setVechime(int vechime_actualizata) {
 		this->vechime = vechime_actualizata;
 	}
 
@@ -65,14 +65,11 @@ public:
 		return this->salariu;
 	}
 
-	void setSalariu(float salariu_nou) {
+	float setSalariu(float salariu_nou) {
 		this->salariu = salariu_nou;
 	}
 
 	virtual void marire_salariu() = 0;
 	
 };
-
-
-
 

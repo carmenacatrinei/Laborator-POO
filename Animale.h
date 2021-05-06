@@ -20,10 +20,21 @@ public:
     Urs();
     Urs(std::string, int, bool, bool);
     ~Urs();
+    friend std::ostream& operator<<(std::ostream& output, const Urs& afisare_urs);
     void dreseaza();
     void infoGenerale();
     void afisare();
 };
 
+class Vulpe :public Animal {
+public:
+    Vulpe();
+    Vulpe(std::string, int, bool, bool);
+    ~Vulpe();
+    friend std::ostream& operator<<(std::ostream& output, const Vulpe& afisare_vulpe);
+    void dreseaza();
+    void infoGenerale();
+    void afisare();
+};
 
 
