@@ -24,22 +24,27 @@ Casier::Casier(std::string nume, std::string prenume, int varsta, int vechime) :
 }
 */
 
-void Casier::marire_salariu()
-{
-	if (vechime / 2 > 0)
-	{
-		salariu = GradinaZoologica::salariuBaza_casier + 0.1 * GradinaZoologica::salariuBaza_casier;
-	}
-	for (int i = 1; i < vechime / 2; i++)
-	{
-		salariu = 1.1 * salariu;
-	}
+//void Casier::marire_salariu()
+//{
+//	if (vechime / 2 > 0)
+//	{
+//		salariu = GradinaZoologica::salariuBaza_casier + 0.1 * GradinaZoologica::salariuBaza_casier;
+//	}
+//	for (int i = 1; i < vechime / 2; i++)
+//	{
+//		salariu = 1.1 * salariu;
+//	}
+//
+//	if (salariu > GradinaZoologica::salariuBaza_casier)
+//	{
+//		std::cout << "Angajatul " << this->nume << " " << this->prenume << " are salariul marit!\n";
+//		std::cout << "Salariul actual este de " << this->salariu << " lei net lunar.";
+//	}
+//}
 
-	if (salariu > GradinaZoologica::salariuBaza_casier)
-	{
-		std::cout << "Angajatul " << this->nume << " " << this->prenume << " are salariul marit!\n";
-		std::cout << "Salariul actual este de " << this->salariu << " lei net lunar.";
-	}
+int Casier::get_salariu_baza()
+{
+	return GradinaZoologica::get_salariu_baza(1);
 }
 
 Casier::~Casier()
@@ -77,22 +82,27 @@ Ingrijitor::Ingrijitor(std::string nume, std::string prenume, int varsta, int ve
 	std::cout << "si un salariu de " << this->salariu << " lei net lunar.";
 }*/
 
-void Ingrijitor::marire_salariu()
-{
-	if (vechime / 2 > 0)
-	{
-		salariu = GradinaZoologica::salariuBaza_ingrijitor + 0.1 * GradinaZoologica::salariuBaza_ingrijitor;
-	}
-	for (int i = 1; i < vechime / 2; i++)
-	{
-		salariu = 1.1 * salariu;
-	}
+//void Ingrijitor::marire_salariu()
+//{
+//	if (vechime / 2 > 0)
+//	{
+//		salariu = GradinaZoologica::salariuBaza_ingrijitor + 0.1 * GradinaZoologica::salariuBaza_ingrijitor;
+//	}
+//	for (int i = 1; i < vechime / 2; i++)
+//	{
+//		salariu = 1.1 * salariu;
+//	}
+//
+//	if (salariu > GradinaZoologica::salariuBaza_ingrijitor)
+//	{
+//		std::cout << "Angajatul " << this->nume << " " << this->prenume << " are salariul marit!\n";
+//		std::cout << "Salariul actual este de " << this->salariu << " lei net lunar.";
+//	}
+//}
 
-	if (salariu > GradinaZoologica::salariuBaza_ingrijitor)
-	{
-		std::cout << "Angajatul " << this->nume << " " << this->prenume << " are salariul marit!\n";
-		std::cout << "Salariul actual este de " << this->salariu << " lei net lunar.";
-	}
+int Ingrijitor::get_salariu_baza()
+{
+	return GradinaZoologica::get_salariu_baza(3);
 }
 
 Ingrijitor::~Ingrijitor()
@@ -130,22 +140,27 @@ Dresor::Dresor(std::string nume, std::string prenume, int varsta, int vechime) :
 	std::cout << "si un salariu de " << this->salariu << " lei net lunar.";
 }*/
 
-void Dresor::marire_salariu()
-{
-	if (vechime / 2 > 0)
-	{
-		salariu = GradinaZoologica::salariuBaza_dresor + 0.1 * GradinaZoologica::salariuBaza_dresor;
-	}
-	for (int i = 1; i < vechime / 2; i++)
-	{
-		salariu = 1.1 * salariu;
-	}
+//void Dresor::marire_salariu()
+//{
+//	if (vechime / 2 > 0)
+//	{
+//		salariu = GradinaZoologica::salariuBaza_dresor + 0.1 * GradinaZoologica::salariuBaza_dresor;
+//	}
+//	for (int i = 1; i < vechime / 2; i++)
+//	{
+//		salariu = 1.1 * salariu;
+//	}
+//
+//	if (salariu > GradinaZoologica::salariuBaza_dresor)
+//	{
+//		std::cout << "Angajatul " << this->nume << " " << this->prenume << " are salariul marit!\n";
+//		std::cout << "Salariul actual este de " << this->salariu << " lei net lunar.";
+//	}
+//}
 
-	if (salariu > GradinaZoologica::salariuBaza_dresor)
-	{
-		std::cout << "Angajatul " << this->nume << " " << this->prenume << " are salariul marit!\n";
-		std::cout << "Salariul actual este de " << this->salariu << " lei net lunar.";
-	}
+int Dresor::get_salariu_baza()
+{
+	return GradinaZoologica::get_salariu_baza(2);
 }
 
 Dresor::~Dresor()

@@ -43,6 +43,8 @@ public:
 	} //pentru o implementare ulterioara '\_(:D)_/'
 	*/
 
+	static int get_salariu_baza(int tip);
+
 	void afisare_zoo();
 
 };

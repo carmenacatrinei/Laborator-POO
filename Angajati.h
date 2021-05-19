@@ -7,7 +7,8 @@ public:
 	Casier();
 	Casier(std::string, std::string, int, int);
 	~Casier();
-	void marire_salariu();
+	void marire_salariu() { Angajat::marire_salariu(); };
+	int get_salariu_baza() override;
 	//void afisare();
 };
 
@@ -16,7 +17,8 @@ public:
 	Ingrijitor();
 	Ingrijitor(std::string, std::string, int, int);
 	~Ingrijitor();
-	void marire_salariu();
+	void marire_salariu() { Angajat::marire_salariu(); };
+	int get_salariu_baza() override;
 	//void afisare();
 };
 
@@ -25,7 +27,8 @@ public:
 	Dresor();
 	Dresor(std::string, std::string, int, int);
 	~Dresor();
-	void marire_salariu();
+	void marire_salariu() { Angajat::marire_salariu(); };
+	int get_salariu_baza() override;
 	//void afisare();
 };
 

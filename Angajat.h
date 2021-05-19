@@ -69,7 +69,26 @@ public:
 		this->salariu = salariu_nou;
 	}
 
-	virtual void marire_salariu() = 0;
+	void marire_salariu()
+	{
+		if (vechime / 2 > 0)
+		{
+			salariu = 1.1 * get_salariu_baza();
+		}
+		for (int i = 1; i < vechime / 2; i++)
+		{
+			salariu = 1.1 * salariu;
+		}
+
+		if (salariu > get_salariu_baza())
+		{
+			std::cout << "Angajatul " << this->nume << " " << this->prenume << " are salariul marit!\n";
+			std::cout << "Salariul actual este de " << this->salariu << " lei net lunar.";
+		}
+	}
+
+	virtual int get_salariu_baza() = 0;
+
 	
 };
 

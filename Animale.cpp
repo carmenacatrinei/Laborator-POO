@@ -11,24 +11,24 @@ Leu::Leu()
     portie_zilnica = 0;
 }
 
-Leu::Leu(const Leu &copie_leu) 
+Leu::Leu(const Leu &leu) 
 {
     //constructor de copiere
-    this->specie = copie_leu.specie;
-    this->nume = copie_leu.nume;
-    this->varsta = copie_leu.varsta;
-    this->gen = copie_leu.gen;
-    this->dresat = copie_leu.dresat;
-    this->portie_zilnica = copie_leu.portie_zilnica;
+    this->specie = leu.specie;
+    this->nume = leu.nume;
+    this->varsta = leu.varsta;
+    this->gen = leu.gen;
+    this->dresat = leu.dresat;
+    this->portie_zilnica = leu.portie_zilnica;
 }
 
-Leu Leu::operator=(const Leu& copie_leu) {
-    this->specie = copie_leu.specie;
-    this->nume = copie_leu.nume;
-    this->varsta = copie_leu.varsta;
-    this->gen = copie_leu.gen;
-    this->dresat = copie_leu.dresat;
-    this->portie_zilnica = copie_leu.portie_zilnica;
+Leu Leu::operator=(const Leu& leu) {
+    this->specie = leu.specie;
+    this->nume = leu.nume;
+    this->varsta = leu.varsta;
+    this->gen = leu.gen;
+    this->dresat = leu.dresat;
+    this->portie_zilnica = leu.portie_zilnica;
     return *this;
 }
 
@@ -76,7 +76,8 @@ Leu::Leu(std::string nume, int varsta, bool gen, bool dresat) : Animal(nume, var
     }
 }
 
-void Leu::infoGenerale() {
+
+void Leu::infoGenerale()  {
     std::cout << "Leul (Panthera Leo) este o specie de mamifere carnivore din familia felidelor, fiind una dintre cele patru specii ale genului Panthera, reprezentant al subfamiliei felinelor mari.\n";
     std::cout << "Este una dintre cele mai mari feline si unul dintre cei mai mari rapitori terestri (după ursul polar, ursul brun si tigru).";
     /*Sursa: https://ro.wikipedia.org/wiki/Leu */

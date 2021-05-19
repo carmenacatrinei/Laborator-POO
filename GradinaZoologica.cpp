@@ -42,3 +42,21 @@ void GradinaZoologica::afisare_zoo()
 		angajati[i]->afisare();
 	}*/
 }
+
+//tip: 1=casier 2=dresor 3=ingrijitor
+int GradinaZoologica::get_salariu_baza(int tip)
+{
+	if (tip == 1)
+	{
+		return GradinaZoologica::salariuBaza_casier;
+	}
+	else if (tip == 2)
+	{
+		return GradinaZoologica::salariuBaza_dresor;
+	}
+	else if (tip == 3)
+	{
+		return GradinaZoologica::salariuBaza_ingrijitor;
+	}
+	return 0;
+}

@@ -10,9 +10,9 @@ public:
     Leu(const Leu& copie_leu);
     Leu operator=(const Leu& copie_leu);
     friend std::ostream& operator<<(std::ostream& output, const Leu& afisare_leu);
-    void dreseaza();
-    void infoGenerale();
-    void afisare();
+    void dreseaza() override;
+    void infoGenerale() override;
+    void afisare() override;
 };
 
 class Urs :public Animal {
@@ -21,9 +21,9 @@ public:
     Urs(std::string, int, bool, bool);
     ~Urs();
     friend std::ostream& operator<<(std::ostream& output, const Urs& afisare_urs);
-    void dreseaza();
-    void infoGenerale();
-    void afisare();
+    void dreseaza() override;
+    void infoGenerale() override;
+    void afisare() override;
 };
 
 class Vulpe :public Animal {
@@ -32,9 +32,9 @@ public:
     Vulpe(std::string, int, bool, bool);
     ~Vulpe();
     friend std::ostream& operator<<(std::ostream& output, const Vulpe& afisare_vulpe);
-    void dreseaza();
-    void infoGenerale();
-    void afisare();
+    void dreseaza() override;
+    void infoGenerale() override;
+    void afisare() override;
 };
 
 

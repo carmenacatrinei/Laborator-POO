@@ -16,48 +16,24 @@ int main()
     Vulpe vulpe3("Neo", 4, 0, 1);
 
     std::cout << leu1;
+    std::cout << vulpe1;
+    std::cout << urs1;
 
     try
     {
         leu1.dreseaza();
-    }
-    catch (const std::exception& e)
-    {
-        std::cout << e.what();
-    }
-
-    std::cout << "\n" << leu1;
-    std::cout << leu2;
-    std::cout << leu3;
-
-    std::cout << urs1;
-    
-    try
-    {
         urs1.dreseaza();
-    }
-    catch (const std::exception& e)
-    {
-        std::cout << e.what();
-    }
-
-    std::cout << "\n" << urs1;
-    std::cout << urs2;
-    std::cout << urs3;
- 
-    std::cout << vulpe1;
-    try
-    {
         vulpe1.dreseaza();
     }
     catch (const std::exception& e)
     {
         std::cout << e.what();
     }
-    std::cout << "\n" << vulpe1;
-
-    std::cout << vulpe2;
-    std::cout << vulpe3;
+    std::cout << "\n\n\n";
+        
+    std::cout << leu1;
+    std::cout << vulpe1;
+    std::cout << urs1;
 
     Casier casier1("Popescu", "Dan", 30, 5);
     casier1.afisare();

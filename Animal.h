@@ -59,6 +59,11 @@ public:
     virtual void afisare() = 0;
     virtual void dreseaza() = 0;
     virtual void infoGenerale() = 0;
+
+    virtual ~Animal()
+    {
+        std::cout << "Animalul a parasit gradina :(";
+    }
 };
 
 //int Animal::numar = 0;
